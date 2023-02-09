@@ -1,11 +1,25 @@
 module.exports = function reverse (n) {
-    let result = 0;
-    while (n) {
-        result = result * 10 + n % 10;
-        n = Math.floor(n / 10);
-  }
-  return result;
+    let numberEnd = 0 ;
+    let result = 0 ;
+    let result2 = 0 ;
+ 
+    function reverseWhile (n){
+    while(n){
+        numberEnd = n % 10 
+        result = (result * 10) + numberEnd  
+        n = n/10|0  
+        console.log(n)
+    }   
+      return result
+    }
+    if(n > 0){
+        return reverseWhile(n)
+    }else if(n < 0) {      
+        return reverseWhile(n) * -1
+    }
 }
+
+
 
   
 
